@@ -21,8 +21,28 @@ export default new Router({
           component: () => import('@/components/GroupBar.vue'),
         },
         {
+          path: '',
+          component: () => import('@/components/Bar.vue'),
+        },
+        {
           path: 'bar',
-          component: () => import('@/components/BarChart.vue'),
+          component: () => import('@/components/Bar.vue'),
+        },
+        {
+          path: 'pie',
+          component: () => import('@/components/Pie.vue'),
+        },
+        {
+          path: 'line',
+          component: () => import('@/components/Line.vue'),
+        },
+        {
+          path: 'groupLine',
+          component: () => import('@/components/GroupLine.vue'),
+        },
+        {
+          path: 'area',
+          component: () => import('@/components/Area.vue'),
         },
       ],
     },

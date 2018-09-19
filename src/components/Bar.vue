@@ -76,28 +76,13 @@ export default class BarChart extends Vue {
         .attr('width', x.bandwidth())
         .attr('y', (d) => y(d.value))
         .attr('height', (d) => height - y(d.value));
-        // Appending bar chart to the chart
-
-        // chart.append('rect')
-        //     .attr('class', 'bar')
-        //     .attr('x', d => x(d as string) )
-        //     .attr('height', (d) => { return height - y(d.value); })
-        //     .attr('y', (d) => { return y(d.value); })
-        //     .attr('width', x.bandwidth());
-
-        // // Appending text to each bar chart
-        // chart.append('text')
-        //     .attr('class', 'barText')
-        //     .attr('x', function(d) { return xScale(d.key); })
-        //     .attr('y', function(d) { return yScale(d.value); })
-        //     .attr('dx', xScale.bandwidth()/2)
-        //     .attr('dy', 20)
-        //     .attr('text-anchor', 'middle')
-        //     .text(function(d){ return d.value; });
     }
-  };
+  }
 </script>
 <style lang='scss'>
   .bar { fill: steelblue; }
+  .bar:hover {
+    fill: red;
+  }
 </style>
 
