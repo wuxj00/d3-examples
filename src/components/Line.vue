@@ -15,7 +15,7 @@ const listData: any[] = capitals.map((key) => {
 });
 
 @Component
-export default class BarChart extends Vue {
+export default class Line extends Vue {
 
   private mounted() {
     this.renderChart();
@@ -64,12 +64,8 @@ export default class BarChart extends Vue {
         .call(d3.axisLeft(y).ticks(10) as any);
 
     const line = d3.line()
-    	.x((d: any) => x(d.key) as number)
-      .y((d: any) => y(d.value));
-
-    const line2 = d3.line()
-    	.x((d: any) => x(d.key + 200 * Math.random()) as number)
-      .y((d: any) => y(d.value));
+    .x((d: any) => x(d.key) as number)
+    .y((d: any) => y(d.value));
 
     g.append('path')
       .datum(listData)

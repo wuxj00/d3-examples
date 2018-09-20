@@ -41,8 +41,16 @@ export default new Router({
           component: () => import('@/components/GroupLine.vue'),
         },
         {
+          path: 'lineHover',
+          component: () => import('@/components/LineHover.vue'),
+        },
+        {
           path: 'area',
           component: () => import('@/components/Area.vue'),
+        },
+        {
+          path: 'radar',
+          component: () => import('@/components/Radar.vue'),
         },
       ],
     },

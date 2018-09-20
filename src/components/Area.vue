@@ -65,7 +65,7 @@ export default class BarChart extends Vue {
       .selectAll('stop')
     .data([
       { offset: '0%', color: 'red' },
-      { offset: '100%', color: 'lawngreen' }
+      { offset: '100%', color: 'lawngreen' },
     ]).enter().append('stop')
     .attr('offset', (d) => d.offset)
     .attr('stop-color', (d) =>  d.color);
@@ -84,27 +84,27 @@ export default class BarChart extends Vue {
         .call(d3.axisBottom(x) as any)
         .attr('font-weight', 'bold');
 
-      // Appending Y axis
-      g.append('g')
-          .attr('class', 'axisY')
-          .call(d3.axisLeft(y).ticks(10) as any);
+    // Appending Y axis
+    g.append('g')
+      .attr('class', 'axisY')
+      .call(d3.axisLeft(y).ticks(10) as any);
 
-      g.append('path')
-       .data([listData])
-       .attr('class', 'area')
-       .attr('d', area);
-
-      g.append('path')
+    g.append('path')
       .data([listData])
-      .attr('class', 'line')
-      .attr('fill', 'none')
-      .attr('stroke', '#f00')
-      .attr('stroke-width', 2)
-      .attr('stroke-linejoin', 'round')
-      .attr('stroke-linecap', 'round')
-      .attr('d', line);
-    }
+      .attr('class', 'area')
+      .attr('d', area);
+
+    g.append('path')
+    .data([listData])
+    .attr('class', 'line')
+    .attr('fill', 'none')
+    .attr('stroke', '#f00')
+    .attr('stroke-width', 2)
+    .attr('stroke-linejoin', 'round')
+    .attr('stroke-linecap', 'round')
+    .attr('d', line);
   }
+}
 </script>
 <style lang='scss'>
 .area {
