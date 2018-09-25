@@ -17,7 +17,7 @@ export default new Router({
       component: Home,
       children: [
         {
-          path: 'group-bar',
+          path: 'groupBar',
           component: () => import('@/components/GroupBar.vue'),
         },
         {

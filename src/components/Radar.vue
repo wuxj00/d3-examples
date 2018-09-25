@@ -25,7 +25,7 @@ const listData = [
   }, {
     area: 'Riverside ',
     value: 80,
-  },],
+  }],
 ];
 
 @Component
@@ -48,7 +48,7 @@ export default class Radar extends Vue {
       ExtraWidthX: 300,
     };
 
-    //Call function to draw the Radar chart
+    //  Call function to draw the Radar chart
     new RadarChart().draw('#chart', listData, config);
 
     const svg = d3.select('body')

@@ -1,6 +1,6 @@
 <template>
     <div class="cmcc-header header">
-      <label class="cmcc-header-title"></label>
+      <label class="cmcc-header-title">d3-v4-examples</label>
       <user-info></user-info>
     </div>
 </template>
@@ -26,7 +26,6 @@ export default class HeaderComp extends Vue {
     background:linear-gradient(90deg,rgba(2,162,175,1),rgba(0,123,134,1));
     &-title {
        display: inline-block;
-       background: url(../assets/images/head_common_logo.png) 20px no-repeat;
        font-weight: 700;
        font-style: normal;
        font-size: 20px;
